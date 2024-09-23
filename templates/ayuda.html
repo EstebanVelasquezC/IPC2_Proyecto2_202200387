@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2; margin: 0; padding: 0;">
+    <div style="width: 80%; max-width: 800px; margin: 50px auto; background-color: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+        <h1 style="text-align: center; color: #4C4C4C; font-size: 24px; margin-bottom: 30px;">Ayuda</h1>
+
+        <p style="color: #333; font-size: 16px;">Bienvenido al sistema de ayuda de la aplicación de Simulación de Ensamblaje. Aquí puedes encontrar información útil sobre el funcionamiento de la aplicación.</p>
+
+        <ul style="list-style-type: none; padding: 0; margin: 20px 0;">
+            <li style="margin-bottom: 10px;">
+                <strong>Inicializar Datos:</strong> Te permite configurar y preparar los datos para realizar la simulación.
+            </li>
+            <li style="margin-bottom: 10px;">
+                <strong>Cargar Archivo:</strong> Carga un archivo de configuración con los detalles de los productos y componentes.
+            </li>
+            <li style="margin-bottom: 10px;">
+                <strong>Simular Producto:</strong> Realiza la simulación del proceso de ensamblaje de un producto en particular.
+            </li>
+            <li style="margin-bottom: 10px;">
+                <strong>Generar Archivo de Salida:</strong> Al ejecutar la simulación, se generará un archivo de salida en formato XML. Asegúrate de que se haya completado la simulación correctamente.
+            </li>
+            <li style="margin-bottom: 10px;">
+                <strong>Descargar Reporte HTML:</strong> Una vez que se haya ejecutado la simulación, podrás descargar un reporte en formato HTML que contiene los resultados.
+            </li>
+        </ul>
+
+        <p style="color: #333; font-size: 16px;">Accede a más recursos en el siguiente enlace:</p>
+        <p style="text-align: center;">
+            <a href="https://drive.google.com/drive/folders/15IxWDc_9gffhEuVLx13yzwTL4zDmdW7f?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">documentacion</a>
+        </p>
+        
+        <br>
+        <p style="text-align: center;">
+            <a href="{{ url_for('index') }}" style="color: #007BFF; text-decoration: none;">Volver al inicio</a>
+        </p>
+    </div>
+</body>
+</html>

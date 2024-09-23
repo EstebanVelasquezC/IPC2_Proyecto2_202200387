@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            background-color: #f2f2f2; 
+            margin: 0; 
+            padding: 0;
+        }
+        .container {
+            width: 80%; 
+            max-width: 800px; 
+            margin: 50px auto; 
+            background-color: white; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            padding: 20px;
+        }
+        h1 {
+            text-align: center; 
+            color: #4C4C4C; 
+            font-size: 24px; 
+            margin-bottom: 30px;
+        }
+        .button {
+            display: block; 
+            width: 90%; 
+            padding: 10px; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-size: 16px; 
+            text-align: center; 
+            margin: 10px auto; 
+        }
+        .btn-inicializar {
+            background-color: #4CAF50; /* Verde */
+        }
+        .btn-cargar {
+            background-color: #1E90FF; /* Azul */
+        }
+        .btn-simular {
+            background-color: #FF8C00; /* Naranja */
+        }
+        .btn-ayuda {
+            background-color: #6A5ACD; /* Púrpura */
+        }
+        .alert {
+            padding: 10px; 
+            margin-bottom: 20px; 
+            border: 1px solid transparent; 
+            border-radius: 4px; 
+        }
+        .alert-success {
+            color: #155724; 
+            background-color: #d4edda; 
+            border-color: #c3e6cb;
+        }
+        .alert-danger {
+            color: #721c24; 
+            background-color: #f8d7da; 
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simulación de Ensamblaje</h1>
+
+        <!-- Mensajes de Flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <a href="/inicializar" class="button btn-inicializar">Inicializar Datos</a>
+        <a href="/cargar" class="button btn-cargar">Cargar Configuración</a>
+        <a href="/simular" class="button btn-simular">Simular Máquina</a>
+        <a href="/ayuda" class="button btn-ayuda">Ayuda</a>
+    </div>
+
+    <script>
+        // Ocultar mensajes después de 3 segundos
+        setTimeout(function() {
+            var alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                alert.style.display = 'none';
+            });
+        }, 3000);
+    </script>
+</body>
+</html>

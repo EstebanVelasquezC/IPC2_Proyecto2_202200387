@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargar Archivo</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2; margin: 0; padding: 0;">
+    <div style="width: 80%; max-width: 800px; margin: 50px auto; background-color: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+        <h1 style="text-align: center; color: #4C4C4C; font-size: 24px; margin-bottom: 30px;">Cargar Archivo de Configuración</h1>
+
+        <form action="/cargar_archivo" method="POST" enctype="multipart/form-data">
+            <label for="archivo" style="display: block; margin-bottom: 10px; color: #333; font-size: 16px;">Seleccionar archivo de configuración:</label>
+            <input type="file" name="archivo" id="archivo" style="width: 90%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; margin-bottom: 20px;" required>
+
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #1E90FF; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">Cargar Archivo</button>
+        </form>
+    </div>
+</body>
+</html>

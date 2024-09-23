@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación y Reporte</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f2f2f2;">
+    <div class="container" style="margin-top: 50px;">
+        <h1 class="text-center" style="color: #4C4C4C;">Simulación de Máquinas</h1>
+
+        <!-- Formulario para seleccionar la acción -->
+        <form action="{{ url_for('ejecutar_accion') }}" method="POST">
+            <h2 style="text-align: center;">Seleccione una opción:</h2>
+            <div class="text-center" style="margin-bottom: 20px;">
+                <button type="submit" name="accion" value="generar_archivo_salida" class="btn btn-primary">Generar Archivo de Salida</button>
+                <button type="submit" name="accion" value="descargar_reporte" class="btn btn-secondary">Generar Reporte HTML</button>
+            </div>
+        </form>
+
+        <!-- Mostrar enlaces al archivo de salida y al reporte -->
+        {% if report_data %}
+        <div class="alert alert-success" style="margin-top: 20px;">
+            <h2>Resultados de la Simulación</h2>
+            <p><strong>Archivo de salida:</strong> 
+                <a href="{{ url_for('static', filename='archivo_de_salida.xml') }}" target="_blank">Descargar archivo_de_salida.xml</a>
+            </p>
+            <p><strong>Reporte HTML:</strong> 
+                <a href="{{ url_for('static', filename='reporte_simulacion.html') }}" target="_blank">Descargar reporte_simulacion.html</a>
+            </p>
+        </div>
+        {% endif %}
+
+        <p class="text-center">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Volver al inicio</a>
+        </p>
+    </div>
+</body>
+</html>
