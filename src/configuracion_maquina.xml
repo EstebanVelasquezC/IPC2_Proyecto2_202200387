@@ -1,0 +1,10 @@
+<maquina nombre="Máquina A">
+    <linea nombre="Línea 1">
+        <componente>Componente A1</componente>
+        <componente>Componente A2</componente>
+    </linea>
+    <linea nombre="Línea 2">
+        <componente>Componente B1</componente>
+        <componente>Componente B2</componente>
+    </linea>
+</maquina>
